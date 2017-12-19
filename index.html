@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Calculate anything App</title>
+        <meta name="viewport" content="width=device-width" />
+        <script type="text/javascript" src="phonegap.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Calculate anything:</h1>
+            <!-- from https://getbootstrap.com/docs/4.0/components/forms/ -->
+            <form action="#" onsubmit="calculate(); return false;">
+              <div class="form-group">
+                <label for="firstInput">First Input</label>
+                <input type="number" class="form-control" id="firstInput" placeholder="Enter first input" required="required">
+              </div>
+              <div class="form-group">
+                <label for="secondInput">Second Input</label>
+                <input type="number" class="form-control" id="secondInput" placeholder="Enter second input" required="required">
+              </div>
+              <div class="form-group">
+                <label for="operator">Select Operation</label>
+                <select class="form-control" id="operator" required="required">
+                  <option value="add">Addition</option>
+                  <option value="sub">Subtraction</option>
+                  <option value="mul">Multiplication</option>
+                  <option value="div">Division</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+            <hr/>
+            <div class="alert alert-primary" role="alert">
+              The result is: <span id="result">Unknown</span>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
